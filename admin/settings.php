@@ -35,8 +35,9 @@ function re7mc_settings_page() {
                         <?php
                         $currencies = get_option( 're7mc_currencies', [
                             'USD' => ['symbol' => '$',  'position' => 'before', 'enabled' => 1, 'rate' => 1],
+                            'EUR' => ['symbol' => '€',  'position' => 'before', 'enabled' => 1, 'rate' => 0.91],
+                            'IDR' => ['symbol' => 'Rp', 'position' => 'before', 'enabled' => 1, 'rate' => 16500],
                             'GBP' => ['symbol' => '£',  'position' => 'before', 'enabled' => 1, 'rate' => 0.79],
-                            'IDR' => ['symbol' => 'Rp', 'position' => 'before', 'enabled' => 1, 'rate' => 15600],
                             'JPY' => ['symbol' => '¥',  'position' => 'before', 'enabled' => 1, 'rate' => 144],
                         ]);
                         foreach ( $currencies as $code => $data ) { ?>
