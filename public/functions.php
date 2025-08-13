@@ -129,3 +129,20 @@ function re7mc_activate() {
     // also initialize currencies here if needed
 }
 register_activation_hook( __FILE__, 're7mc_activate' );
+function re7mc_add_euro_currency() {
+    $currencies = get_option('re7mc_currencies', []);
+
+    // Add EUR only if it doesn't exist yet
+    if ( ! isset( $currencies['EUR'] ) ) {
+        $currencies['EUR'] = [
+            'symbol' => '€',
+            'position' => 'before',
+            'enabled' => 1,
+            'rate' => 0.91,
+        ];
+
+        update_option('re7mc_currencies', $currencies);
+    }
+}
+register_activation_hook( __FILE__, 're7mc_add_euro_currency' );
+add_action('admin_init', 're7mc_add_euro_currency');
