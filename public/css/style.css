@@ -1,0 +1,38 @@
+form.re7mc-currency-switcher{
+    margin-bottom: 0;
+}
+.re7mc-currency-switcher ul.list {
+    height: auto;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.re7mc-currency-switcher .nice-select {
+    margin-bottom: 0;
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.top-links.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 41px;
+}
+
+.currency-switcher-row {
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    padding-inline-start: 6px;
+    align-items: center;
+    border-color: #ede0c8;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.currency-switcher-row .span-label{
+    font-size: 12px;
+    font-weight: bold;
+}
