@@ -121,3 +121,11 @@ function re7mc_enqueue_currency_script() {
     );
 }
 add_action( 'wp_enqueue_scripts', 're7mc_enqueue_currency_script' );
+
+function re7mc_activate() {
+    if ( false === get_option( 're7mc_enable_dropdown' ) ) {
+        update_option( 're7mc_enable_dropdown', 1 );
+    }
+    // also initialize currencies here if needed
+}
+register_activation_hook( __FILE__, 're7mc_activate' );

@@ -19,7 +19,11 @@ function re7mc_currency_switcher_shortcode()
     }
 
     if (empty($active_currencies)) {
-        return 'Currency Switcher Not Enabled';
+        // Maybe add a default currency, like USD
+        $active_currencies['USD'] = [
+            'enabled' => 1,
+            'name' => 'US Dollar',
+        ];
     }
 
     ob_start(); ?>
